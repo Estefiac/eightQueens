@@ -33,6 +33,7 @@ class EightQueen:
          print('\n{} Generation!\n'.format(self.generations))
          for row in board:
             print(row)
+         self.displayData()
       else:
          self.crossOver()
          self.generations += 1
@@ -46,7 +47,7 @@ class EightQueen:
       self.suma = 0
       self.suma = self.checkCollision()
       self.collision = self.suma
-      self.fitness = (-((28.0 - self.collision) / 28.0) + 1) * 10 
+      self.fitness = (-((28.0 - self.collision) / 28.0) + 1) * 100
       print("\nCollisions: {}".format(self.collision))
       print("\nFitness: {0:.2f}%".format(self.fitness))
 
